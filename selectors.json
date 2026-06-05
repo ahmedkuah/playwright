@@ -1,0 +1,13 @@
+{
+  "newMailButton": "[aria-label=\"New email\"]",
+  "toField": "[aria-label=\"To\"]",
+  "subjectField": "[aria-label=\"Subject\"]",
+  "bodyField": "[aria-label=\"Message body\"]",
+  "sendButton": "[aria-label=\"Send\"]",
+  "importanceButton": "[aria-label=\"High importance\"]",
+  "attachmentsList": "[role='listbox'][aria-label='file attachments'] [role='option']",
+  "attachmentProgress": "[role='progressbar']",
+  "discardButton": "#discardCompose, [aria-label*='Discard'], [title*='Discard (Esc)']",
+  "messageSent": "text=Message sent",
+  "modalDialog": "[role='dialog']"
+}

